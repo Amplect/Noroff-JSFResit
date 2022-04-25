@@ -5,13 +5,13 @@ function Nav() {
   return (
     <nav>
       <NavLink to="/" exact className="nav-link">
-        Home
+        home
       </NavLink>
       <NavLink to="/grass" className="nav-link">
-        Grass
+        grass
       </NavLink>
       <NavLink to="/contact" className="nav-link">
-        Contact
+        contact
       </NavLink>
     </nav>
   );
