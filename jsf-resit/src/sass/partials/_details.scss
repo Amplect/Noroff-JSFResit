@@ -1,0 +1,32 @@
+.container__details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    &--information {
+        width: 400px;
+        text-align: left;
+        margin: 40px;
+    }
+
+    &--image {
+        padding-top: 25px;
+        width: 200px;
+        margin: 40px;
+    }
+}
+
+.details {
+    &__button {
+        background-color: #003A70;
+        color: #afc8e6;
+        width: 100px;
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: #FFCB05;
+        }
+    }
+}
