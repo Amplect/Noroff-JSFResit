@@ -43,7 +43,7 @@ function PokemonList() {
         const link = "/details/" + pokemon.id;
         return (
           <div key={id} className="card">
-            <img src={imageUrl} />
+            <img src={imageUrl} alt={name} />
             <Link to={link} className="card__link">
               <p className="card__link--text">Go to {name}</p>
             </Link>

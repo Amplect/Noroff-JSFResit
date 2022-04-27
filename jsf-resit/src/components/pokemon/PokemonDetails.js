@@ -54,7 +54,7 @@ function PokemonDetails() {
   return (
     <div className="container__details">
       <div className="container__details--image">
-        <img src={pokemon.imageUrl} />
+        <img src={pokemon.imageUrl} alt={pokemon.name} />
       </div>
       <div className="container__details--information">
         <Heading>{pokemon.name}</Heading>
