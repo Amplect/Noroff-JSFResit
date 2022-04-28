@@ -1,3 +1,13 @@
+.container__contact {
+    &--success {
+        background-color: lightgreen;
+        color: green;
+        padding: 2px 7px 2px 7px;
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
 .contact__form {
     max-width: 400px;
     margin: 0 auto;
@@ -13,6 +23,12 @@
             color:#003A70;
             font-size: 0.9rem;
         }
+    }
+
+    &--select {
+        text-align: left;
+        width: 380px;
+        margin-left: 10px;
     }
 
     &--button {

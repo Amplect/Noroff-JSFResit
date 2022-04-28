@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #afc8e6;
+  background-color: #e6ecf4;
 }
 
 .container {
@@ -106,6 +106,14 @@ nav .nav-link:hover {
   color: #FFCB05;
 }
 
+.container__contact--success {
+  background-color: lightgreen;
+  color: green;
+  padding: 2px 7px 2px 7px;
+  width: 200px;
+  margin: 0 auto;
+}
+
 .contact__form {
   max-width: 400px;
   margin: 0 auto;
@@ -142,6 +150,12 @@ nav .nav-link:hover {
 .contact__form--input::placeholder {
   color: #003A70;
   font-size: 0.9rem;
+}
+
+.contact__form--select {
+  text-align: left;
+  width: 380px;
+  margin-left: 10px;
 }
 
 .contact__form--button {

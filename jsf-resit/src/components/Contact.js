@@ -1,7 +1,10 @@
 import Heading from "./layout/Heading";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import Select from "react-select";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useState } from "react";
+import { queryTypes } from "./constants/queryTypes";
 
 const schema = yup.object().shape({
   name: yup
@@ -19,9 +22,12 @@ const schema = yup.object().shape({
 });
 
 function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -29,9 +35,21 @@ function Contact() {
 
   function onSubmit(data) {
     console.log(data);
+    setSubmitted(true);
   }
 
-  console.log(errors);
+  if (submitted) {
+    return (
+      <>
+        <Heading>Contact us</Heading>
+        <div className="container__contact">
+          <div className="container__contact--success">
+            <p>Your message was sent!</p>
+          </div>
+        </div>
+      </>
+    );
+  }
 
   return (
     <>
@@ -55,19 +73,17 @@ function Contact() {
           {errors.phone && (
             <span className="error">{errors.phone.message}</span>
           )}
-          <select
-            name="query-type"
-            id="query-type"
-            className="contact__form--input"
-          >
-            <option value="" disabled selected>
-              What's this about?
-            </option>
-            <option value="enquiry">Enquiry</option>
-            <option value="compliment">Compliment</option>
-            <option value="complaint">Complaint</option>
-            <option value="general-message">General message</option>
-          </select>
+          <Controller
+            name="queryTypes"
+            control={control}
+            render={({ field }) => (
+              <Select
+                className="contact__form--select"
+                options={queryTypes}
+                {...field}
+              />
+            )}
+          />
           <textarea
             className="contact__form--input"
             placeholder="Message"
@@ -76,7 +92,9 @@ function Contact() {
           {errors.message && (
             <span className="error">{errors.message.message}</span>
           )}
-          <button className="contact__form--button">Send form</button>
+          <button className="contact__form--button" type="submit">
+            Send form
+          </button>
         </form>
       </div>
     </>
