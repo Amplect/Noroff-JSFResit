@@ -23,6 +23,30 @@ body {
   margin-left: 10px;
 }
 
+.home__search {
+  width: 150px;
+  padding: 5px;
+  color: #003A70;
+  font-size: 1rem;
+  border: none;
+}
+
+.home__search::-webkit-input-placeholder {
+  color: #7d91aa;
+}
+
+.home__search:-ms-input-placeholder {
+  color: #7d91aa;
+}
+
+.home__search::-ms-input-placeholder {
+  color: #7d91aa;
+}
+
+.home__search::placeholder {
+  color: #7d91aa;
+}
+
 nav {
   background-color: #003A70;
   width: 100%;

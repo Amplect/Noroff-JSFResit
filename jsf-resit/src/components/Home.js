@@ -7,7 +7,6 @@ function Home() {
   return (
     <>
       <Heading>Home</Heading>
-      <p>Welcome to the Base 1 Pokedex!</p>
       <Search />
       <div className="card-container">
         <PokemonList />

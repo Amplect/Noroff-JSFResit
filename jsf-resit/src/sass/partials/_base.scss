@@ -18,3 +18,15 @@ body {
     margin-bottom: 20px;
     margin-left: 10px;
 }
+
+.home__search {
+    width: 150px;
+    padding: 5px;
+    color: #003A70;
+    font-size: 1rem;
+    border: none;
+
+    &::placeholder {
+        color: #7d91aa;
+    }
+}
