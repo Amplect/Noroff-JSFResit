@@ -1,9 +1,8 @@
-import React from "react";
-
 function Footer() {
   return (
     <div className="footer">
-      <p className="footer__text">Pokemon provided by pokemontcg.io</p>
+      <p className="footer__text">Pokémon provided by pokemontcg.io</p>
+      <p className="footer__text">JS Frameworks resit assignment</p>
     </div>
   );
 }

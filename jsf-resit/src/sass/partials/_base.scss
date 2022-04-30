@@ -1,7 +1,14 @@
+@include font-face("Pokemon", "./fonts/PokemonSolid.ttf");
+
 body {
     text-align: center;
     background-color: #e6ecf4;
     
+}
+
+h1 {
+    font-family: 'Pokemon';
+    font-size: 4rem;
 }
 
 .container {

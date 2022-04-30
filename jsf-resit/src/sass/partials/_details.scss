@@ -22,11 +22,25 @@
         color: #afc8e6;
         width: 100px;
         text-align: center;
-        padding: 20px;
-        cursor: pointer;
+        padding: 10px;
+        margin-top: 20px;
 
         &:hover {
             color: #FFCB05;
+            cursor: pointer;
+        }
+    }
+
+    &__information {
+        width: 400px;
+
+        &--subject {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        &--detail {
+            font-size: 1rem;
         }
     }
 }

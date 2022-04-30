@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'Pokemon';
+  src: url(./fonts/PokemonSolid.ttf);
+}
+
 body {
   text-align: center;
   background-color: #e6ecf4;
+}
+
+h1 {
+  font-family: 'Pokemon';
+  font-size: 4rem;
 }
 
 .container {
@@ -83,6 +93,7 @@ nav .nav-link:hover {
 .card-container .card__link {
   color: #afc8e6;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .card-container .card__link:hover {
@@ -122,12 +133,26 @@ nav .nav-link:hover {
   color: #afc8e6;
   width: 100px;
   text-align: center;
-  padding: 20px;
-  cursor: pointer;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .details__button:hover {
   color: #FFCB05;
+  cursor: pointer;
+}
+
+.details__information {
+  width: 400px;
+}
+
+.details__information--subject {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.details__information--detail {
+  font-size: 1rem;
 }
 
 .container__contact--success {

@@ -6,7 +6,7 @@ import Search from "./search/Search.component";
 function Home() {
   return (
     <>
-      <Heading>Home</Heading>
+      <Heading>Pokemon</Heading>
       <Search />
       <div className="card-container">
         <PokemonList />

@@ -10,9 +10,9 @@ class Search extends Component {
   };
 
   getPokemon = () => {
-    axios.get(`${url}`).then(({ data }) => {
+    axios.get(`${url}`).then(({ cards }) => {
       this.setState({
-        results: data,
+        results: cards,
       });
       console.log(this.state.results);
     });
@@ -32,14 +32,16 @@ class Search extends Component {
   render() {
     return (
       <form>
-        <input
-          className="home__search"
-          placeholder="Search Pokemon"
-          ref={(input) => (this.search = input)}
-          onChange={this.handleInputChange}
-        />
+        <>
+          <input
+            className="home__search"
+            placeholder="Search Pokemon"
+            ref={(input) => (this.search = input)}
+            onChange={this.handleInputChange}
+          />
 
-        <Suggestions results={this.state.results} />
+          <Suggestions results={this.state.results} />
+        </>
       </form>
     );
   }
