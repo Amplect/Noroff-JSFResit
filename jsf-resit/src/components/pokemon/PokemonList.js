@@ -14,7 +14,6 @@ function PokemonList() {
 
         if (response.ok) {
           const json = await response.json();
-          console.log(json.cards);
           setPokemon(json.cards);
         } else {
           setError("An error occurred while fetching Pokemon...");

@@ -15,10 +15,8 @@ function GrassList() {
 
         if (response.ok) {
           const json = await response.json();
-          console.log(json.cards);
           let pokemon = json.cards;
           let grassTypes = _.filter(pokemon, { types: ["Grass"] });
-          console.log(grassTypes);
           setPokemon(grassTypes);
         } else {
           setError("An error occurred while fetching Pokemon...");

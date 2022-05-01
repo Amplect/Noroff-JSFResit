@@ -27,7 +27,6 @@ function PokemonDetails() {
 
           if (response.ok) {
             const json = await response.json();
-            console.log(json.card);
             setPokemon(json.card);
           } else {
             setError("An error occurred fetching the details...");
